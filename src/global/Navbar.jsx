@@ -23,14 +23,14 @@ export const Navbar = () => (
                     Search
                 </NavLink>
             </div>
-        </div>
-
-        <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul className="navbar-nav ml-auto">
-                <NavLink exact to="/login" activeClassName="active" className="nav-item nav-link">
-                    Logout
-                </NavLink>
-            </ul>
+            
+            <div className="my-2 my-lg-0">
+                <ul className="navbar-nav ml-auto">
+                    <NavLink exact to="/login" activeClassName="active" className="nav-item nav-link">
+                        Logout
+                    </NavLink>
+                </ul>
+            </div>
         </div>
     </nav>
 )

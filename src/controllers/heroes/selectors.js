@@ -14,8 +14,6 @@ export const getHeroesById = id => heroes.find(heroe => heroe.id === id)
 
 export const getHeroesByAll = input => {
 
-    console.log("Hola")
-
     if(input === "")
         return heroes
 

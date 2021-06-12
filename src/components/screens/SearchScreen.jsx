@@ -3,6 +3,12 @@ import queryString from 'query-string'
 import { HeroCard } from '../heroe/HeroCard'
 import { getHeroesByAll } from '../../controllers/heroes/selectors'
 
+const styleHeroContainer = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+}
+
 export const SearchScreen = ({history, location}) => {
 
     const { q = '' } = queryString.parse(location.search)
@@ -17,13 +23,7 @@ export const SearchScreen = ({history, location}) => {
         e.preventDefault()
         history.push(`?q=${search}`)
     }
-
-    const styleHeroContainer = {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-    }
-
+    
     return (
         <div>
             <h1>Search</h1>
