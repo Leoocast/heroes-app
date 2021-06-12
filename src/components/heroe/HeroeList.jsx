@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { getHeroesByPublisher } from '../../controllers/heroes/selectors'
 import { HeroCard } from './HeroCard'
 
 export const HeroeList = ({publisher}) => {
 
-    const heroes = getHeroesByPublisher(publisher)
+    const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher])
 
     const heroListStyles = {
         display:"flex",

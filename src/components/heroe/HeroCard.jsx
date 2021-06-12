@@ -21,7 +21,7 @@ export const HeroCard = ({id, superhero, publisher, alter_ego, first_appearance,
                             <small className="text-muted">{first_appearance}</small>
                         </p>
                         <div className="col-sm-12">
-                            <Link className="btn btn-dark btn-block" to={`hero/${id}`}>
+                            <Link className="btn btn-dark btn-block" to={`./hero/${id}`}>
                                 Details
                             </Link>
                         </div>
