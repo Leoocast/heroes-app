@@ -6,6 +6,8 @@ import { types } from '../../types/types'
 export const LoginScreen = ({history}) => {
 
     const { dispatchUser } = useContext(AuthContext)
+    
+    const lastPath = localStorage.getItem('lastPath') || '/'
 
     const handleLogin = () => {
 
@@ -18,7 +20,7 @@ export const LoginScreen = ({history}) => {
 
         dispatchUser(loginAction)
         
-        history.replace('/')
+        history.replace(lastPath)
     }
 
     return (
