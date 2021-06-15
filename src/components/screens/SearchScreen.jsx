@@ -46,7 +46,7 @@ export const SearchScreen = ({history, location}) => {
                         There is no hero with "{q}""
                     </div>
                 }
-                <div style={styleHeroContainer} className="col 12">
+                <div style={styleHeroContainer} className="col-12">
                     {
                         heroesFilter.map(hero => <HeroCard key={hero.id} {...hero}/>)
                     }

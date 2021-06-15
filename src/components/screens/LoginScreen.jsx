@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Redirect } from 'react-router-dom'
+import { AuthContext } from '../../auth/AuthContext'
+import { types } from '../../types/types'
 
 export const LoginScreen = ({history}) => {
 
+    const { dispatchUser } = useContext(AuthContext)
+
     const handleLogin = () => {
+
+        const loginAction = {
+            type: types.AUTH.LOGIN,
+            payload: {
+                name: "Leo Castellanos"
+            }
+        }
+
+        dispatchUser(loginAction)
+        
         history.replace('/')
     }
 
